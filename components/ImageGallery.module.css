@@ -1,0 +1,143 @@
+/* ImageGallery.module.css */
+
+  /* components/ImageGallery.module.css */
+  .titleSection {
+    /* width: 75%;  this will be for smaller frames and Ensures the title section spans the full width of its container */
+    text-align: start; /* Aligns the title text to the left */
+    padding-right: 875px; /* Adjusts padding to ensure the title isn't directly against the container edge */
+  }
+
+  @media screen and (max-width: 1100px) and (min-width: 768px) {
+    .titleSection {
+      width: 95%;
+      text-align: start;
+      font-size: 20px; /* Slightly smaller font size for medium screens */
+      margin-bottom: 15px;
+      padding-right: 300px
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .titleSection {
+      width: 95%;
+      text-align: center; /* Center the title */
+      font-size: 18px; /* Adjust font-size directly on .titleSection might not be effective unless it's inherited */
+      margin-bottom: 10px; /* Adjusted bottom margin */
+      padding-right: 0; /* Reset or adjust padding as needed */
+      /* Remove padding-right: 100px and correct the missing semicolon if this was a typo */
+    }
+  
+    .titleSection h2 {
+      font-size: 1.8rem; /* Smaller font size for small screens, consider em or rem for responsiveness */
+      margin: 0 auto; /* Center the title block if needed */
+      /* Adjusted margin-bottom as per above, if necessary */
+    }
+  
+    /* Hide the line under the title */
+    .titleSection h2::after {
+        content: none !important;
+    }
+  }
+
+  .titleSection h2 {
+    display: inline-block; /* Allows the ::after element to align correctly */
+    font-size: 3rem; /* Adjust as needed */
+    margin-bottom: 20px; /* Space between title and cards */
+    position: relative; /* For the ::after positioning */
+}
+
+.titleSection h2::after {
+    content: '';
+    display: block;
+    width: 75%; /* Or 100% if you want it to be responsive */
+    height: 2px; /* Thickness of the line */
+    background-color: #000; /* Line color */
+    position: absolute;
+    left: 100%; /* Starts right after the text */
+    top: 50%; /* Aligns with the middle of the text */
+    margin-left: 10px; /* Space between text and line */
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.container {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    overflow-x: auto;
+}
+
+.card {
+    width: 80px;
+    height: 400px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 15px 32px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+.input {
+    display: none;
+}
+
+.input:checked + .card {
+    width: 700px;
+}
+
+.input:checked + .card .description {
+    opacity: 1;
+    transform: translateY(0);
+}

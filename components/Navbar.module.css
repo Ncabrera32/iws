@@ -1,0 +1,108 @@
+/* components/Navbar.module.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  transition: flex-direction 0.3s ease; /* Smooth transition for flex-direction change */
+}
+
+.logo a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.navItems {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  transition: flex-direction 0.3s ease; /* Smooth transition for layout change */
+  justify-content: center;
+}
+
+.navItem a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px; /* Spacing between menu items */
+  transition: margin 0.3s ease; /* Smooth transition for margin change */
+}
+
+/* Adjustments for viewports between 768px and 900px */
+@media (min-width: 768px) and (max-width: 900px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the start */
+    padding-top: 20px; /* Add padding at the top for spacing */
+  }
+  
+  .navItems {
+    flex-direction: row; 
+    align-items: flex-start; /* Align nav items to the start */
+    width: 100%; /* Full width of the navbar */
+    padding-top: 0px; /* Space between logo and nav items */
+  }
+
+  .navItem a {
+    margin-left: 50px; /* Remove spacing between menu items */
+    margin-bottom: 20px; /* Add some space between stacked items */
+  }
+}
+
+/* Mobile menu toggle button */
+.navToggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 32px; /* Example size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .navToggle {
+    display: block; /* Show toggle button */
+  }
+
+  .navItems {
+    display: none; /* Hide navigation items by default on smaller screens */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Full width */
+    padding-top: 60px; /* Space from the top */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255); /* Match navbar background */
+  }
+
+  /* Show navigation items when toggle is activated */
+  .navItems.show {
+    display: flex;
+  }
+}
+
+/* components/Navbar.module.css */
+.logo img {
+  max-height: 125px; /* Adjust based on your design */
+  cursor: 'pointer';
+  width: auto; /* Maintain aspect ratio */
+  transition: max-height 0.3s ease; /* Optional: smooth transition */
+}
+
+/* Adjust the logo size at and below 900px viewport width */
+@media (max-width: 900px) {
+  .logo img {
+    max-height: 80px; /* Smaller height for smaller screens */
+    /* Adjust width if necessary, or leave it to auto for aspect ratio */
+  }
+}
+
+
+  

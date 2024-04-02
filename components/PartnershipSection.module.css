@@ -1,0 +1,52 @@
+/* PartnershipSection.module.css */
+.partnershipSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 75px;
+    padding-bottom: 75px
+  }
+  
+  .textContent, .logoContainer {
+    flex: 1; /* Each takes up equal space */
+    max-width: 43%; /* Explicitly define max-width for clarity */
+  }
+  
+  .textContent h2, .textContent p {
+    margin: 0 0 20px 0; /* Adjust bottom margin as needed */
+  }
+  
+  .logo {
+    max-width: 100%; /* Ensures the logo is responsive and doesn't exceed its container */
+    height: auto;
+    padding-left: 20px;
+  }
+  
+  /* Adjust for responsiveness */
+  @media (max-width: 768px) {
+    .partnershipSection {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .textContent, .logoContainer {
+      max-width: 100%; /* Full width on smaller screens */
+    }
+    
+    .logo {
+        max-width: 35%; /* Ensures the logo is responsive and doesn't exceed its container */
+        height: auto;
+        padding-left: 20px;
+        padding-top: 20px;
+      }
+
+    .logoContainer {
+      margin-top: 20px; /* Add some space between the text and logo on smaller screens */
+    }
+  }
+  
+  

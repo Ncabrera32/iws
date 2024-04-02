@@ -1,0 +1,61 @@
+/* styles/Home.module.css */
+.container {
+  padding: 0 2rem;
+}
+.mainContent {
+  padding-top: 60px; /* Adjust based on your navbar's actual height */
+}
+
+/* Adjust for mobile */
+@media (max-width: 768px) {
+  .mainContent {
+    padding-top: 50px; /* Assuming the navbar is shorter on mobile */
+  }
+}
+
+.servicesSection h2 {
+  margin-top: 0; /* Remove default margin from the top */
+  padding-top: 0; /* Adjust as needed to position your text */
+  /* Additional styling for the "Our Services" text */
+}
+
+.servicesSection {
+  position: relative;
+  color: white; /* Set text color to white */
+  text-align: center; /* Center-align the text */
+  padding: 20px 0; 
+  background-color:rgb(12, 27, 35);
+  z-index: 1;
+  padding-bottom: 0;
+  top: -11px
+}
+
+.servicesSection::before,
+.servicesSection::after {
+  content: '';
+  position: absolute;
+  top: -99.5px; /* Position at the top of the servicesSection */
+  width: 50%; /* Half the width of the container */
+  height: 100px; /* Adjust the height to control the steepness of the slant */
+  background-color: rgb(12, 27, 35); /* The blue background color */
+  z-index: -1;
+}
+
+.servicesSection::before {
+  left: 50vw;
+  clip-path: polygon(0 100%, 100% 0, 100% 100%); /* Slant down towards the right */
+}
+
+.servicesSection::after {
+  right: 50vw;
+  clip-path: polygon(0 100%, 0 0, 100% 100%); /* Slant down towards the left */
+}
+
+@media (max-width: 767px) {
+  .servicesSection::before,
+  .servicesSection::after {
+    display: none;
+  }
+}
+/* Add more styles here */
+
