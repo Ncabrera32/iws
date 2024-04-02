@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <Layout pageTitle="My Next.js App">
+    <Layout pageTitle="IRONWOOD SITE">
       {/* Image container */}
       <div style={{ width: '100%', paddingTop: '80px' }}>
         <Image
