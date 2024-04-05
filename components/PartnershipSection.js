@@ -5,14 +5,18 @@ import styles from './PartnershipSection.module.css'; // Assuming you're using C
 const PartnershipSection = () => {
   return (
     <div className={styles.partnershipSection}>
+    <div className={styles.contentContainer}>
       <div className={styles.textContent}>
         <h2>Ready To Partner up on your project?</h2>
         <p>Contact us today to discuss your project, request a quote, or explore how our expertise can benefit your construction needs.</p>
-        <button>Get in touch</button>
+        <button className={styles.partnerButton}>
+        Get In Touch <span className={styles.arrowIcon}>➔</span>
+        </button>
       </div>
       <div className={styles.logoContainer}>
         <img src="/images/whitelogo.png" alt="Company Logo" className={styles.logo} />
       </div>
+    </div>
     </div>
   );
 };

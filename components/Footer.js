@@ -5,6 +5,7 @@ import styles from './Footer.module.css'; // Assuming you're using CSS Modules
 const Footer = () => {
   return (
     <footer className={styles.footer}>
+        <div className={styles.footerContainer}>
       <div className={styles.logoSection}>
         <img src="/images/NavBarLogo.png" alt="Ironwood Construction Logo" className={styles.logo} />
         <div className={styles.socialLinks}>
@@ -37,6 +38,7 @@ const Footer = () => {
       </div>
       <div className={styles.copyRight}>
   © 2024 IRONWOOD CONSTRUCTION. ALL RIGHTS RESERVED.
+</div>
 </div>
     </footer>
   );

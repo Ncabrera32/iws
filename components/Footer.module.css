@@ -2,31 +2,41 @@
 .footer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; /* Adjusts the spacing of child elements */
+    background-color: rgb(255, 255, 255);
+
+    width: 100%; /* Ensure the footer takes full width */
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+    align-items: center; /* Centers items vertically */
+  }
+  .footerContainer{
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     background-color: white;
     padding: 20px;
     box-sizing: border-box;
+    align-items: center;
+    max-width: 1150px;
   }
-  
+
   .logoSection {
     flex: 1;
-    min-width: 300px; /* Ensures logo section doesn't get too small */
+    max-width: 30%; /* Ensures logo section doesn't get too small */
   }
   
   .logo {
-    max-width: 60%;
+    display: flex;
     align-items: center;
     height: auto;
+    max-width: 100%;
   }
   
   .socialLinks {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Adjust spacing between buttons */
+    gap: 5px; /* Adjust spacing between buttons */
     padding-top: 50px;
-  }
-  
-  .socialLinks button {
   }
   
   .footerOptions {
@@ -61,7 +71,11 @@
       flex-direction: column;
       align-items: center;
     }
-  
+
+    .footerContainer{
+        justify-content: center;
+    }
+
     .logoSection {
       display: flex; /* Ensures flexbox properties apply */
       justify-content: center; /* Horizontally centers its children */
@@ -73,7 +87,7 @@
     }
   
     .logo {
-      max-width: 30%; /* Adjusts the logo size */
+      max-width: 75%; /* Adjusts the logo size */
       height: auto;
       margin: 0 auto; /* Centers the logo if it's not flexed by its parent */
     }
@@ -104,3 +118,22 @@
     margin-top: 20px; /* Creates space between the copyright notice and the rest of the footer */
     padding: 10px 0; /* Adds padding above and below the text */
   }
+
+  .socialLinks button {
+    background-color: white; /* Sets the button background to white */
+    color: #333; /* Dark grey text */
+    border: 2px solid #333; /* Dark grey border */
+    padding: 5px 10px; /* Adjust padding to suit your design */
+    margin: 0 5px; /* Adds spacing between buttons */
+    text-transform: uppercase; /* Optional: transforms text to uppercase */
+    font-weight: bold; /* Optional: makes the font bold */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.socialLinks button:hover {
+    background-color: #333; /* Dark grey background on hover */
+    color: white; /* White text on hover */
+}

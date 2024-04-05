@@ -27,6 +27,9 @@
       /* Remove padding-right: 100px and correct the missing semicolon if this was a typo */
     }
   
+    .card:nth-child(n+8) {
+      display: none;
+    } 
     .titleSection h2 {
       font-size: 1.8rem; /* Smaller font size for small screens, consider em or rem for responsiveness */
       margin: 0 auto; /* Center the title block if needed */
@@ -44,6 +47,7 @@
     font-size: 3rem; /* Adjust as needed */
     margin-bottom: 20px; /* Space between title and cards */
     position: relative; /* For the ::after positioning */
+    padding-bottom: 40px;
 }
 
 .titleSection h2::after {

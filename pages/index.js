@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 
 export default function Home() {
   return (
-    <Layout pageTitle="IRONWOOD SITE">
+    <Layout pageTitle="Ironwood Site">
       {/* Image container */}
       <div style={{ width: '100%', paddingTop: '80px' }}>
         <Image
