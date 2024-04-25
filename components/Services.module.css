@@ -10,6 +10,8 @@
     margin-top: 20px;
     margin-bottom: 10px; /* Add a bottom margin of 10px */
     font-size: 3rem;
+    color: white;
+    text-align: center;
   }
   
   .vShape {
@@ -134,4 +136,8 @@
     color: #ACE; /* Lighter shade or different color when hovered */
     text-decoration: none;
  }
+
+ .hiddenTitle {
+  display: none;
+}
   

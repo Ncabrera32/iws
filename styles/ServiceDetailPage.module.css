@@ -1,0 +1,96 @@
+/* ServiceDetailPage.module.css */
+.hero {
+    width: 100%;
+    position: relative;
+}
+.heroImage {
+    width: 100%; 
+    height: 400px;
+    object-fit: cover;
+}
+.heroTitle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+}
+
+.serviceDetail {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.imageContainer {
+    position: relative;
+    max-width: 880px;
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.serviceImage {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.serviceContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+    text-align: center;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.89), rgba(0, 0, 0, 0));
+    padding-bottom: 50px;
+}
+
+.serviceTitle {
+    margin-bottom: 20px; 
+    font-size: 2em;   
+}
+
+.serviceDescription {
+    font-size: 1.2em;    
+    max-width: 55%;       
+    margin: 0 auto;  
+}
+
+.serviceSection h3 {
+    font-size: 24px; /* Larger size for headings */
+}
+
+.serviceSection p {
+    font-size: 16px; /* Larger size for paragraphs */
+}
+
+.ol {
+    padding-left: 20px; /* Adds padding to align list content */
+    margin-top: 10px; /* Extra space above the list */
+    margin-bottom: 10px; /* Extra space below the list */
+}
+
+.li {
+    margin-bottom: 5px; /* Space between list items */
+}
+
+@media (max-width: 920px){
+    .serviceDetail {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}

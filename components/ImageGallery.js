@@ -5,12 +5,11 @@ import styles from './ImageGallery.module.css'; // Ensure this CSS module exists
 
 const images = ['/images/card1.png', '/images/card2.png']; // Array of image sources
 
-
 const ImageGallery = () => {
     return (
         
       <div className={styles.wrapper}>
-        <div class={styles.titleSection}>
+        <div className={styles.titleSection}>
         <h2>Our Work</h2>
         </div>
         <div className={styles.container}>

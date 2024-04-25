@@ -4,14 +4,14 @@ import styles from './Services.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Services = () => {
+const Services = ({ hideTitle = false }) => {
   return (
     
     <div className={styles.servicesContainer}>
       <div className={styles.bgColor}></div> {/* Background color block */}
       <div className={styles.vShape}></div> {/* Transparent 'V' shape */}
       <div className={styles.servicesSection}>
-      <h2> Our Services</h2>
+      <h2 className={hideTitle ? styles.hiddenTitle : ''}>Our Services</h2>
       <div className={styles.cardsContainer}>
       <div className={styles.card}>
       <Image src="/images/card1.png" alt="Service 1" 
@@ -23,7 +23,7 @@ const Services = () => {
         <p className={styles.cardDescription}>
         A short description of General Contracting
         </p>
-        <Link href="/learn-more" passHref className={styles.cardLink}>
+        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
             Learn More
       </Link>
      </div>
@@ -38,7 +38,7 @@ const Services = () => {
         <p className={styles.cardDescription}>
         A short description of GC management.
         </p>
-        <Link href="/learn-more" passHref className={styles.cardLink}>
+        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
             Learn More
       </Link>
      </div>
@@ -53,7 +53,7 @@ const Services = () => {
         <p className={styles.cardDescription}>
         A short description of In House Design Services
         </p>
-        <Link href="/learn-more" passHref className={styles.cardLink}>
+        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
             Learn More
       </Link>
      </div>
@@ -68,7 +68,7 @@ const Services = () => {
         <p className={styles.cardDescription}>
         A short description of Design Build
         </p>
-        <Link href="/learn-more" passHref className={styles.cardLink}>
+        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
             Learn More
       </Link>
      </div>
