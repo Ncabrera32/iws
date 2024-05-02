@@ -8,11 +8,12 @@ const Services = ({ hideTitle = false }) => {
   return (
     
     <div className={styles.servicesContainer}>
-      <div className={styles.bgColor}></div> {/* Background color block */}
-      <div className={styles.vShape}></div> {/* Transparent 'V' shape */}
+      <div className={styles.bgColor}></div>
+      <div className={styles.vShape}></div>
       <div className={styles.servicesSection}>
       <h2 className={hideTitle ? styles.hiddenTitle : ''}>Our Services</h2>
       <div className={styles.cardsContainer}>
+      <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
       <Image src="/images/card1.png" alt="Service 1" 
       layout="fill"
@@ -23,60 +24,61 @@ const Services = ({ hideTitle = false }) => {
         <p className={styles.cardDescription}>
         A short description of General Contracting
         </p>
-        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
-            Learn More
-      </Link>
+        <span className={styles.cardLink}>Learn More</span>
      </div>
       </div>
+      </Link>
+
+      <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
       <Image src="/images/card2.png" alt="Service 1" 
       layout="fill"
       objectFit="cover" 
       />
         <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}>GC<br/>Management</h3>
+        <h3 className={styles.cardTitle}>Tenant Improvement</h3>
         <p className={styles.cardDescription}>
-        A short description of GC management.
+        A short description of Tenant Improvement.
         </p>
-        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
-            Learn More
-      </Link>
+        <span className={styles.cardLink}>Learn More</span>
      </div>
       </div>
+      </Link>
+
+      <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
       <Image src="/images/card3.png" alt="Service 1" 
       layout="fill"
       objectFit="cover" 
       />
         <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}>In House<br/>Design Services</h3>
+        <h3 className={styles.cardTitle}>Development</h3>
         <p className={styles.cardDescription}>
-        A short description of In House Design Services
+        A short description of Development Services
         </p>
-        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
-            Learn More
-      </Link>
+        <span className={styles.cardLink}>Learn More</span>
      </div>
       </div>
+      </Link>
+
+      <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
       <Image src="/images/card4.png" alt="Service 1" 
       layout="fill"
       objectFit="cover" 
       />
         <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}>Design<br/>Build</h3>
+        <h3 className={styles.cardTitle}>Design Build</h3>
         <p className={styles.cardDescription}>
         A short description of Design Build
         </p>
-        <Link href="/services/general-contracting" passHref className={styles.cardLink}>
-            Learn More
-      </Link>
+        <span className={styles.cardLink}>Learn More</span>
      </div>
       </div>
+      </Link>
   </div>
   </div>
-      {/* Additional content here */}
-    </div>
+  </div>
   );
 };
 

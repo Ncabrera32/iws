@@ -38,13 +38,13 @@ const Navbar = () => {
         &#9776; {/* Unicode character for hamburger menu */}
       </button>
       <ul className={`${styles.navItems} ${isNavVisible ? styles.show : ''}`}>
-        <li className={styles.navItem}><Link href="/about">About</Link></li>
         <li className={styles.navItem}><Link href="/services">Services</Link></li>
         <li className={styles.navItem}><Link href="/work">Work</Link></li>
-        <li className={styles.navItem}><Link href="/careers">Careers</Link></li>
         <li className={styles.navItem}><Link href="/contact">Contact Us</Link></li>
-        <li className={styles.navItem}><Link href="/media">Media</Link></li>
-        <li className={styles.navItem}><Link href="/get-a-quote">Get A Quote</Link></li>
+        <li className={styles.navItem}><Link href="/about">About Us</Link></li>
+        {/* <li className={styles.navItem}><Link href="/careers">Careers</Link></li> */}
+        {/* <li className={styles.navItem}><Link href="/media">Media</Link></li>
+        <li className={styles.navItem}><Link href="/get-a-quote">Get A Quote</Link></li> */}
       </ul>
     </nav>
   );

@@ -2,12 +2,12 @@
 .footer {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Adjusts the spacing of child elements */
+    justify-content: center; 
     background-color: rgb(255, 255, 255);
 
-    width: 100%; /* Ensure the footer takes full width */
-    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
-    align-items: center; /* Centers items vertically */
+    width: 100%; 
+    box-sizing: border-box; 
+    align-items: center; 
   }
   .footerContainer{
     display: flex;
@@ -22,7 +22,7 @@
 
   .logoSection {
     flex: 1;
-    max-width: 30%; /* Ensures logo section doesn't get too small */
+    max-width: 30%; 
   }
   
   .logo {
@@ -35,21 +35,21 @@
   .socialLinks {
     display: flex;
     justify-content: center;
-    gap: 5px; /* Adjust spacing between buttons */
+    gap: 5px; 
     padding-top: 50px;
   }
   
   .footerOptions {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Adjust based on design */
+    gap: 20px; 
     justify-content: space-between;
     padding-top: 55px;
   }
   
   .option {
     flex: 1;
-    min-width: 200px; /* Adjust based on content and design preference */
+    min-width: 200px;
   }
   
   .option h3 {
@@ -59,10 +59,6 @@
   .option ul {
     list-style: none;
     padding: 0;
-  }
-  
-  .option ul li {
-    /* Style your list items here */
   }
   
   /* Responsive adjustments */
@@ -77,19 +73,19 @@
     }
 
     .logoSection {
-      display: flex; /* Ensures flexbox properties apply */
-      justify-content: center; /* Horizontally centers its children */
+      display: flex; 
+      justify-content: center; 
       align-items: center;
-      flex-direction: column; /* Vertically centers its children, if needed */
+      flex-direction: column; 
       flex: 0;
-      width: 100%; /* Makes the logoSection take full width of its parent, aiding in centering */
-      min-width: 300px; /* Ensures logo section doesn't get too small */
+      width: 100%;
+      min-width: 300px; 
     }
   
     .logo {
-      max-width: 75%; /* Adjusts the logo size */
+      max-width: 75%; 
       height: auto;
-      margin: 0 auto; /* Centers the logo if it's not flexed by its parent */
+      margin: 0 auto; 
     }
   
     .footerOptions {
@@ -114,26 +110,42 @@
   .copyRight {
     width: 100%;
     text-align: center;
-    font-size: 0.75rem; /* Adjust the font size as needed */
-    margin-top: 20px; /* Creates space between the copyright notice and the rest of the footer */
-    padding: 10px 0; /* Adds padding above and below the text */
+    font-size: 0.75rem; 
+    margin-top: 20px; 
+    padding: 10px 0; 
   }
 
   .socialLinks button {
-    background-color: white; /* Sets the button background to white */
-    color: #333; /* Dark grey text */
-    border: 2px solid #333; /* Dark grey border */
-    padding: 5px 10px; /* Adjust padding to suit your design */
-    margin: 0 5px; /* Adds spacing between buttons */
-    text-transform: uppercase; /* Optional: transforms text to uppercase */
-    font-weight: bold; /* Optional: makes the font bold */
-    cursor: pointer; /* Changes cursor to pointer on hover */
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+    background-color: white;
+    color: #333; 
+    border: 2px solid #333; 
+    padding: 5px 10px; 
+    margin: 0 5px; 
+    text-transform: uppercase;
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
     border-radius: 20px;
     font-size: 10px;
 }
 
 .socialLinks button:hover {
-    background-color: #333; /* Dark grey background on hover */
-    color: white; /* White text on hover */
+    background-color: #333; 
+    color: white; 
+}
+
+.navItem a {
+  color: black;
+  text-decoration: none;
+  margin-left: 20px; 
+  transition: margin 0.3s ease;
+  margin-left: 0px;
+  padding-bottom: 7px;
+}
+
+.navItem a {
+  color: black;
+  text-decoration: none;
+  display: block; 
+  transition: color 0.3s ease; 
 }

@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 
 const ContactPage = () => {
     return (
-        <Layout pageTitle="Ironwood Site">
+        <Layout pageTitle="Ironwood Contact Us">
         <div style={{ width: '100%'}}>
         <ContactForm />
         </div>

@@ -1,6 +1,7 @@
 // components/Footer.js
 import React from 'react';
-import styles from './Footer.module.css'; // Assuming you're using CSS Modules
+import styles from './Footer.module.css';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -17,22 +18,19 @@ const Footer = () => {
       <div className={styles.footerOptions}>
         <div className={styles.option}>
           <h3>Address</h3>
-          <p>Ironwood Construction<br/>50 E 2500 N #103<br/>N. Logan, UT 84341</p>
+          <p>Ironwood Construction<br/>50 E 2500 N Suite 103<br/>N. Logan, UT 84341</p>
         </div>
         <div className={styles.option}>
           <h3>Contact Us</h3>
-          <p>Phone: 555-555-5555<br/>Fax: 555-555-5555<br/>Email: info@ironwood.com</p>
+          <p>Phone: 435-994-5535<br/>Email: info@ironwc.com</p>
         </div>
         <div className={styles.option}>
           <h3>Discover</h3>
           <ul>
-            <li>Get A Quote</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Services</li>
-            <li>Our Work</li>
-            <li>Careers</li>
-            <li>Media</li>
+          <li className={styles.navItem}><Link href="/services">Services</Link></li>
+          <li className={styles.navItem}><Link href="/work">Work</Link></li>
+          <li className={styles.navItem}><Link href="/contact">Contact Us</Link></li>
+          <li className={styles.navItem}><Link href="/about">About Us</Link></li>
           </ul>
         </div>
       </div>

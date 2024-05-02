@@ -1,23 +1,23 @@
-import Services from '../components/Services';
 import styles from '../styles/ServicesPage.module.css';
 import Layout from '../components/Layout';
 import PartnershipSection from '../components/PartnershipSection';
 import Footer from '../components/Footer';
+import ImageGallery from '../components/ImageGallery';
 
-const ServicesPage = () => {
+const Aboutpage = () => {
     return (
-        <Layout pageTitle="Services">
+        <Layout pageTitle="Ironwood About Us">
         <div>
             <div className={styles.hero}>
-                <img src="/images/card1.png" alt="Ironwood Services" className={styles.heroImage} />
-                <h1 className={styles.heroTitle}>Ironwood Services</h1>
+                <img src="/images/card1.png" alt="Ironwood About Us" className={styles.heroImage} />
+                <h1 className={styles.heroTitle}>About Ironwood</h1>
             </div>
         </div>
-        <Services hideTitle={true} />
+        <ImageGallery />
         <PartnershipSection />
         <Footer />
         </Layout>
     );
 };
 
-export default ServicesPage;
+export default Aboutpage;

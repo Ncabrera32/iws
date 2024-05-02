@@ -1,73 +1,45 @@
-// components/ImageGallery.js
 import React, { useState } from 'react';
-import Image from 'next/image';
-import styles from './ImageGallery.module.css'; // Ensure this CSS module exists
+import { useSwipeable } from 'react-swipeable';
+import styles from './ImageGallery.module.css';
 
-const images = ['/images/card1.png', '/images/card2.png']; // Array of image sources
+const images = ['/images/HpHero.jpg', '/images/card2.png', '/images/card3.png', '/images/card4.png', '/images/card1.png'];
 
 const ImageGallery = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handlers = useSwipeable({
+        onSwipedLeft: () => setCurrentIndex((currentIndex + 1) % images.length),
+        onSwipedRight: () => setCurrentIndex((currentIndex - 1 + images.length) % images.length),
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true
+    });
+
     return (
-        
-      <div className={styles.wrapper}>
-        <div className={styles.titleSection}>
-        <h2>Our Work</h2>
+        <div className={styles.wrapper} {...handlers}>
+            <div className={styles.titleSection}>
+                <h2>Our Work</h2>
+            </div>
+            <div className={styles.container}>
+                {images.map((src, index) => (
+                    <React.Fragment key={index}>
+                        <input type="radio" name="slide" id={`c${index}`} className={styles.input} checked={currentIndex === index} onChange={() => setCurrentIndex(index)} />
+                        <label htmlFor={`c${index}`} className={styles.card} style={{ backgroundImage: `url(${src})` }}>
+                            <div className={styles.row}>
+                                <div className={styles.icon}>{index + 1}</div>
+                                <div className={styles.description}>
+                                    <h4>Project Title {index + 1}</h4>
+                                    <p>Project Description {index + 1}</p>
+                                </div>
+                            </div>
+                        </label>
+                    </React.Fragment>
+                ))}
+            </div>
         </div>
-        <div className={styles.container}>
-          <input type="radio" name="slide" id="c1" className={styles.input} defaultChecked />
-          <label htmlFor="c1" className={styles.card} style={{ backgroundImage: "url('/images/HpHero.jpg')" }}>
-            <div className={styles.row}>
-              <div className={styles.icon}>1</div>
-              <div className={styles.description}>
-                <h4>Project Title</h4>
-                <p>Project Description</p>
-              </div>
-            </div>
-          </label>
-          <input type="radio" name="slide" id="c2" className={styles.input} />
-          <label htmlFor="c2" className={styles.card} style={{ backgroundImage: "url('/images/card2.png')" }}>
-            <div className={styles.row}>
-              <div className={styles.icon}>2</div>
-              <div className={styles.description}>
-              <h4>Project Title</h4>
-                <p>Project Description</p>
-              </div>
-            </div>
-          </label>
-          <input type="radio" name="slide" id="c3" className={styles.input} />
-          <label htmlFor="c3" className={styles.card} style={{ backgroundImage: "url('/images/card3.png')" }}>
-            <div className={styles.row}>
-              <div className={styles.icon}>3</div>
-              <div className={styles.description}>
-              <h4>Project Title</h4>
-                <p>Project Description</p>
-              </div>
-            </div>
-          </label>
-          <input type="radio" name="slide" id="c4" className={styles.input} />
-          <label htmlFor="c4" className={styles.card} style={{ backgroundImage: "url('/images/card4.png')" }}>
-            <div className={styles.row}>
-              <div className={styles.icon}>4</div>
-              <div className={styles.description}>
-              <h4>Project Title</h4>
-                <p>Project Description</p>
-              </div>
-            </div>
-          </label>
-          <input type="radio" name="slide" id="c5" className={styles.input} />
-          <label htmlFor="c5" className={styles.card} style={{ backgroundImage: "url('/images/card1.png')" }}>
-            <div className={styles.row}>
-              <div className={styles.icon}>5</div>
-              <div className={styles.description}>
-              <h4>Project Title</h4>
-                <p>Project Description</p>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
     );
-  };
-  
-  export default ImageGallery;
+};
+
+export default ImageGallery;
+
 
 

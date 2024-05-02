@@ -3,12 +3,12 @@
     position: relative;
     overflow: hidden;
     font-size: 3em;
-    background-color: rgb(12, 27, 35); /* Solid color background */
+    background-color: rgb(12, 27, 35); 
   }
   
   .servicesSection h2 {
     margin-top: 20px;
-    margin-bottom: 10px; /* Add a bottom margin of 10px */
+    margin-bottom: 10px; 
     font-size: 3rem;
     color: white;
     text-align: center;
@@ -19,54 +19,55 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 100px; /* Height of the 'V' shape area */
-    background-color: transparent; /* Make the 'V' shape area transparent */
-    clip-path: polygon(50% 100%, 0 0, 100% 0); /* Creates the upward 'V' shape */
+    height: 100px; 
+    background-color: transparent; 
+    clip-path: polygon(50% 100%, 0 0, 100% 0); 
   }
   
   .bgColor {
     position: absolute;
-    bottom: -1px; /* Overlap the bottom edge to prevent a thin line showing through */
+    bottom: -1px; 
     left: 0;
     right: 0;
-    height: 50px; /* Adjust the height as needed to show below the 'V' */
-    background-color: rgb(12, 27, 35); /* This is your solid color */
-    z-index: -1; /* Ensure this sits behind the 'V' shape */
+    height: 50px; 
+    background-color: rgb(12, 27, 35); 
+    z-index: -1; 
   }
    
   .cardsContainer {
     display: flex;
-    justify-content: center; /* Evenly space the cards horizontally */
-    flex-wrap: wrap; /* Allow the cards to wrap on smaller screens */
-    padding: 20px 0; /* Add some vertical padding */
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0; 
   }
   
   .card {
-    position: relative; /* Needed for Image with layout="fill" */
-    width: 250px; /* Fixed width for rectangular shape */
-    height: 350px; /* Fixed height for rectangular shape */
+    position: relative; 
+    width: 250px; 
+    height: 350px; 
     display: flex;
-    align-items: center; /* Center the content vertically */
-    justify-content: center; /* Center the content horizontally */
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
-    margin: 15px; /* Add some space around the cards */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: add a subtle shadow for depth */
-    border-radius: 8px; /* Optional: round the corners */
-    overflow: hidden; /* Ensure the image doesn't spill outside the card */
+    margin: 15px; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    border-radius: 8px; 
+    overflow: hidden; 
   }
+
 /* For viewports between 1119px and 768px */
 @media (min-width: 840px) and (max-width: 1119px) {
     .cardsContainer {
         display:grid;
-        grid-template-columns: 280px 280px;/* Align items to the start of the flex container */
+        grid-template-columns: 280px 280px;
         justify-items: center;
         justify-content: center;
       }
   
     .card {
-      width: 250px; /* Maintain fixed width */
-      height: 350px; /* Maintain fixed height */
-      margin: 15px; /* Ensure there's space around the cards */
+      width: 250px; 
+      height: 350px; 
+      margin: 15px; 
     }
     .servicesSection h2 {
         font-size: 3rem;
@@ -78,20 +79,48 @@
         font-size: 3rem;
       }
   }
+
   @media (max-width: 768px) {
     .cardsContainer {
+      display: flex;
       flex-direction: column;
-      align-items: center; /* Stack the cards vertically and align them */
+      align-items: normal;
     }
-  
+    
     .card {
-      width: 90%; /* Make the cards take up more space on smaller screens */
-      margin-bottom: 20px; /* Increase space between stacked cards */
+      width: 95%;
+      margin-bottom: 20px;
     }
+
     .servicesSection h2 {
         font-size: 2.5rem;
       }
+      .card .cardTitle, .card .cardDescription, .card .cardLink {
+        transform: translateY(0); 
+        opacity: 1; 
+        visibility: visible; 
+        transition: none; 
+    }
   }
+
+  @media (max-width: 550px) {
+    .cardsContainer {
+      padding-right: 5px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    .cardsContainer {
+      padding-right: 5px;
+    }
+  }
+
+  @media (max-width: 440px) {
+    .cardsContainer {
+      padding-right: 10px;
+    }
+  }
+
 
   .cardContent {
     position: absolute;
@@ -104,36 +133,51 @@
     justify-content: flex-end;
     align-items: flex-start;
     text-align: left;
-    padding: 15px; /* Adjust based on your design */
-    color: white; /* Choose a color that makes the text stand out from the image */
-    background: linear-gradient(to top, rgb(0, 0, 0), transparent);
-  }
-  
-  .cardTitle {
+    padding: 15px;
+    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    overflow: hidden; 
+}
+
+.cardTitle {
     margin: 0;
-    padding-bottom: 10px; /* Space between the title and the description */
-    font-size: 1.5rem; /* Adjust based on your design */
-  }
+    font-size: 1.5rem;
+    transform: translateY(115%); 
+    transition: transform 0.5s ease; 
+    padding-bottom: 10px;
+}
+
+.cardDescription, .cardLink {
+    font-size: 1rem;
+    transform: translateY(100%); 
+    opacity: 0; 
+    transition: transform 0.5s ease, opacity 0.5s ease; 
+}
+
+.card:hover .cardTitle, .card:hover .cardDescription, .card:hover .cardLink {
+    transform: translateY(0%); 
+    opacity: 1;
+}
+
   
   .cardDescription {
     margin: 0;
-    padding-bottom: 10px; /* Space between the description and the link */
-    font-size: 1rem; /* Adjust based on your design */
+    padding-bottom: 10px; 
+    font-size: 1rem;
   }
   
   .cardLink {
     font-size: .9rem;
-    color: white; /* Adjust if you have a different preference for text color */
-    text-decoration: underline; /* Underline the text to indicate it's a link */
-    font-weight: normal; /* Adjust based on your design preference */
-    padding: 0; /* Remove padding */
-    background-color: transparent; /* Remove background color */
-    border-radius: 0; /* Remove border radius */
-    transition: color 0.3s ease; /* Optional: Smooth transition for hover effect */
+    color: white; 
+    text-decoration: underline; 
+    font-weight: normal; 
+    padding: 0; 
+    background-color: transparent; 
+
   }
     /* Hover effect */
   .cardLink:hover {
-    color: #ACE; /* Lighter shade or different color when hovered */
+    color: #ACE; 
     text-decoration: none;
  }
 
