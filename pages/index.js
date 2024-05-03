@@ -5,7 +5,7 @@ import styles from '../styles/Home.module.css';
 import Services from '../components/Services';
 import ImageGallery from '../components/ImageGallery';
 import PartnershipSection from '../components/PartnershipSection';
-import Footer from '../components/Footer';
+
 
 export default function Home() {
   return (
@@ -26,7 +26,6 @@ export default function Home() {
       </div>
       <ImageGallery />
       <PartnershipSection />
-      <Footer />
       </Layout>
   );
 }

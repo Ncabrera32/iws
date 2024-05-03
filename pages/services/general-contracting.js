@@ -2,16 +2,11 @@ import Layout from '../../components/Layout';
 import styles from '../../styles/ServiceDetailPage.module.css';
 import Tab from '../../components/Tab';
 import PartnershipSection from '../../components/PartnershipSection';
-import Footer from '../../components/Footer';
 import Services from '../../components/Services';
 
 export default function GeneralContracting() {
     return (
         <Layout pageTitle="General Contracting">
-            <div className={styles.hero}>
-                <img src="/images/card1.png" alt="General Contracting" className={styles.heroImage} />
-                <h1 className={styles.heroTitle}>Ironwood Services</h1>
-            </div>
             <div className={styles.serviceDetail}>
                 <div className={styles.imageContainer}> 
                      <img src="/images/card2.png" alt="General Contracting" className={styles.serviceImage} />
@@ -60,7 +55,6 @@ export default function GeneralContracting() {
             </Tab>
             <Services />
             <PartnershipSection />
-            <Footer />
         </Layout>
     );
 }

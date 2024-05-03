@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Navbar from './Navbar';
 import styles from './Layout.module.css'; // If using CSS Modules
 import Services from '../components/Services'; 
+import Footer from '../components/Footer';
 
 const Layout = ({ children, pageTitle }) => (
   <div className={styles.container}>
@@ -19,7 +20,7 @@ const Layout = ({ children, pageTitle }) => (
     <main className={styles.main}>{children}</main>
 
     <footer className={styles.footer}>
-      Powered by <a href="https://nextjs.org">Next.js</a>.
+      <Footer />
     </footer>
   </div>
 );

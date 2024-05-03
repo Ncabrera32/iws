@@ -25,7 +25,7 @@ const ImageGallery = () => {
                         <input type="radio" name="slide" id={`c${index}`} className={styles.input} checked={currentIndex === index} onChange={() => setCurrentIndex(index)} />
                         <label htmlFor={`c${index}`} className={styles.card} style={{ backgroundImage: `url(${src})` }}>
                             <div className={styles.row}>
-                                <div className={styles.icon}>{index + 1}</div>
+                                {/* <div className={styles.icon}>{index + 1}</div> */}
                                 <div className={styles.description}>
                                     <h4>Project Title {index + 1}</h4>
                                     <p>Project Description {index + 1}</p>

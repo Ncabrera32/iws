@@ -2,7 +2,6 @@ import Services from '../components/Services';
 import styles from '../styles/ServicesPage.module.css';
 import Layout from '../components/Layout';
 import PartnershipSection from '../components/PartnershipSection';
-import Footer from '../components/Footer';
 
 const ServicesPage = () => {
     return (
@@ -15,7 +14,6 @@ const ServicesPage = () => {
         </div>
         <Services hideTitle={true} />
         <PartnershipSection />
-        <Footer />
         </Layout>
     );
 };

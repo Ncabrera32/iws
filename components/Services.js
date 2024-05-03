@@ -52,7 +52,7 @@ const Services = ({ hideTitle = false }) => {
       objectFit="cover" 
       />
         <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}>Development</h3>
+        <h3 className={styles.cardTitle}><br></br>Development</h3>
         <p className={styles.cardDescription}>
         A short description of Development Services
         </p>
@@ -68,7 +68,7 @@ const Services = ({ hideTitle = false }) => {
       objectFit="cover" 
       />
         <div className={styles.cardContent}>
-        <h3 className={styles.cardTitle}>Design Build</h3>
+        <h3 className={styles.cardTitle}><br></br>Design Build</h3>
         <p className={styles.cardDescription}>
         A short description of Design Build
         </p>

@@ -1,7 +1,5 @@
 import Layout from '../components/Layout';
 import ContactForm from '../components/ContactForm';
-import Footer from '../components/Footer';
-
 
 const ContactPage = () => {
     return (
@@ -9,7 +7,6 @@ const ContactPage = () => {
         <div style={{ width: '100%'}}>
         <ContactForm />
         </div>
-        <Footer />
         </Layout>
     );
 };

@@ -56,7 +56,7 @@
   }
 
 /* For viewports between 1119px and 768px */
-@media (min-width: 840px) and (max-width: 1119px) {
+@media (min-width: 840px) and (max-width: 1135px) {
     .cardsContainer {
         display:grid;
         grid-template-columns: 280px 280px;
