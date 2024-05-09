@@ -14,7 +14,7 @@
     }
   }
 
-  @media screen and (max-width: 767px) {
+  @media (max-width: 767px) {
     .titleSection {
       width: 95%;
       text-align: center; 
