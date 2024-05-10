@@ -15,9 +15,9 @@ const images = [
     '/images/card2.png'
 ];
 
-export default function GeneralContracting() {
+export default function Project() {
     return (
-        <Layout pageTitle="General Contracting">
+        <Layout pageTitle="Project">
             <div className={styles.serviceDetail}>
                 <ThumbnailGallery images={images} />    
                 </div>
@@ -56,8 +56,8 @@ export default function GeneralContracting() {
                         </ol>
                     </div>
             </ProjectTab>
-            <ImageGallery />
-            <Services />
+            {/* <ImageGallery />
+            <Services /> */}
             <PartnershipSection />
         </Layout>
     );
