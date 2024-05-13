@@ -4,10 +4,10 @@ import styles from './ImageGallery.module.css';
 
 const images = [
     { src: '/images/HpHero.jpg', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
-    { src: '/images/card2.png', path: '/project', visibleOnMobile: true, visibleOnDesktop: true },
-    { src: '/images/card3.png', path: '/project', visibleOnMobile: true, visibleOnDesktop: true },
+    { src: '/images/card2.png', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
+    { src: '/images/card3.png', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
     { src: '/images/card4.png', path: '/services/general-contracting', visibleOnMobile: false, visibleOnDesktop: true },
-    { src: '/images/card1.png', path: '/project', visibleOnMobile: false, visibleOnDesktop: true }
+    { src: '/images/card1.png', path: '/work/project', visibleOnMobile: false, visibleOnDesktop: true }
 ];
 
 

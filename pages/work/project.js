@@ -56,8 +56,6 @@ export default function Project() {
                         </ol>
                     </div>
             </ProjectTab>
-            {/* <ImageGallery />
-            <Services /> */}
             <PartnershipSection />
         </Layout>
     );
