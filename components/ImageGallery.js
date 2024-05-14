@@ -3,11 +3,11 @@ import { useSwipeable } from 'react-swipeable';
 import styles from './ImageGallery.module.css';
 
 const images = [
-    { src: '/images/HpHero.jpg', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
-    { src: '/images/card2.png', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
-    { src: '/images/card3.png', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
-    { src: '/images/card4.png', path: '/services/general-contracting', visibleOnMobile: false, visibleOnDesktop: true },
-    { src: '/images/card1.png', path: '/work/project', visibleOnMobile: false, visibleOnDesktop: true }
+    { src: '/images/Clearfield-33.jpg', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
+    { src: '/images/Northern/Northern.jpg', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
+    { src: '/images/doodle/doodlebug.jpg', path: '/work/project', visibleOnMobile: true, visibleOnDesktop: true },
+    { src: '/images/condos.jpg', path: '/services/general-contracting', visibleOnMobile: false, visibleOnDesktop: true },
+    { src: '/images/commercial.jpg', path: '/work/project', visibleOnMobile: false, visibleOnDesktop: true }
 ];
 
 

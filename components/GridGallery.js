@@ -2,15 +2,15 @@ import React from 'react';
 import styles from './GridGallery.module.css';
 
 const images = [
-    '/images/card1.png',
-    '/images/card2.png',
-    '/images/card3.png',
-    '/images/card4.png',
-    '/images/card1.png',
-    '/images/card2.png',
-    '/images/card3.png',
-    '/images/card4.png',
-    '/images/card1.png'
+    '/images/Clearfield-33.jpg',
+    '/images/Northern/Northern.jpg',
+    '/images/doodle/doodlebug.jpg',
+    '/images/condos.jpg',
+    '/images/commercial.jpg',
+    '/images/Clearfield-33.jpg',
+    '/images/Northern/Northern.jpg',
+    '/images/doodle/doodlebug.jpg',
+    '/images/condos.jpg'
 ];
 
 const addresses = [

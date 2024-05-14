@@ -15,7 +15,7 @@ const Services = ({ hideTitle = false }) => {
       <div className={styles.cardsContainer}>
       <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
-      <Image src="/images/card1.png" alt="Service 1" 
+      <Image src="/images/Clearfield-33.jpg" alt="Service 1" 
       layout="fill"
       objectFit="cover" 
       />
@@ -31,7 +31,7 @@ const Services = ({ hideTitle = false }) => {
 
       <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
-      <Image src="/images/card2.png" alt="Service 1" 
+      <Image src="/images/Apt-129.jpg" alt="Service 1" 
       layout="fill"
       objectFit="cover" 
       />
@@ -47,7 +47,7 @@ const Services = ({ hideTitle = false }) => {
 
       <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
-      <Image src="/images/card3.png" alt="Service 1" 
+      <Image src="/images/WestSquare.jpg" alt="Service 1" 
       layout="fill"
       objectFit="cover" 
       />
@@ -63,7 +63,7 @@ const Services = ({ hideTitle = false }) => {
 
       <Link href="/services/general-contracting" passHref>
       <div className={styles.card}>
-      <Image src="/images/card4.png" alt="Service 1" 
+      <Image src="/images/WestSquareAerial.jpg" alt="Service 1" 
       layout="fill"
       objectFit="cover" 
       />

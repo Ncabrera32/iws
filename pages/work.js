@@ -8,7 +8,7 @@ const Workpage = () => {
         <Layout pageTitle="Ironwood's Work">
         <div>
             <div className={styles.hero}>
-                <img src="/images/card1.png" alt="Ironwood's Work" className={styles.heroImage} />
+                <img src="/images/condos.jpg" alt="Ironwood's Work" className={styles.heroImage} />
                 <h1 className={styles.heroTitle}>Ironwood's Work</h1>
             </div>
         </div>

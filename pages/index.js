@@ -13,15 +13,14 @@ export default function Home() {
       {/* Image container */}
       <div style={{ width: '100%', paddingTop: '80px' }}>
         <Image
-          src="/images/HpHero.jpg" // Your image path
-          alt="A scenic view" // Provide a relevant description for accessibility
+          src="/images/ClearfieldHp.jpg"
+          alt="A scenic view" 
           layout="responsive"
-          width={1920} // Original width of the image (adjust as necessary)
-          height={1080} // Original height of the image, maintaining aspect ratio (adjust as necessary)
+          width={1920}
+          height={1080} 
         />
      <div className={styles.servicesSection}>
       <Services />
-      {/* Additional content for the services section */}
         </div>
       </div>
       <ImageGallery />

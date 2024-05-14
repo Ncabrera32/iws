@@ -7,12 +7,12 @@ import ImageGallery from '../../components/ImageGallery';
 import ThumbnailGallery from '../../components/ThumbnailGallery';
 
 const images = [
-    '/images/HpHero.jpg',
-    '/images/card2.png',
-    '/images/card3.png',
-    '/images/card4.png',
-    '/images/card1.png',
-    '/images/card2.png'
+    '/images/ClearfieldHp.jpg',
+    '/images/Clearfield-33.jpg',
+    '/images/WestSquare/Clearfield-34.jpg',
+    '/images/WestSquare/Clearfield-5.jpg',
+    '/images/WestSquare/Clearfield-30.jpg',
+    '/images/WestSquare/Clearfield-31.jpg',
 ];
 
 export default function Project() {

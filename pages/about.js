@@ -10,7 +10,7 @@ const Aboutpage = () => {
         <Layout pageTitle="Ironwood About Us">
         <div>
             <div className={styles.hero}>
-                <img src="/images/card1.png" alt="Ironwood About Us" className={styles.heroImage} />
+                <img src="/images/Northern/Northern.jpg" alt="Ironwood About Us" className={styles.heroImage} />
                 <h1 className={styles.heroTitle}>About Ironwood</h1>
             </div>
         </div>

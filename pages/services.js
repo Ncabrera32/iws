@@ -8,7 +8,7 @@ const ServicesPage = () => {
         <Layout pageTitle="Services">
         <div>
             <div className={styles.hero}>
-                <img src="/images/card1.png" alt="Ironwood Services" className={styles.heroImage} />
+                <img src="/images/commercial.jpg" alt="Ironwood Services" className={styles.heroImage} />
                 <h1 className={styles.heroTitle}>Ironwood Services</h1>
             </div>
         </div>
